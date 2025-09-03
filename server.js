@@ -102,13 +102,14 @@ const { Server } = require('socket.io');
 
 require('dotenv').config();
 
-
 const app = express();
 const server = http.createServer(app);
+
 const io = new Server(server, {
     cors: {
-        origin: ["http://localhost:3000", // Update this with your frontend URL
-
+        origin: [
+            "http://localhost:3000",              // development (React/Next.js local)
+            "https://your-frontend.onrender.com", // deployed frontend URL (Render pe)
         ],
         methods: ["GET", "POST"],
     },
