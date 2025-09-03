@@ -109,7 +109,7 @@ const io = new Server(server, {
     cors: {
         origin: [
             "http://localhost:3000",              // development (React/Next.js local)
-            "https://your-frontend.onrender.com", // deployed frontend URL (Render pe)
+           "https://chatf-771g.onrender.com",
         ],
         methods: ["GET", "POST"],
     },
